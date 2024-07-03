@@ -1,0 +1,88 @@
+<div class="container mt-4">
+    <h2>Restaurant List</h2>
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Search restaurants by name..." [(ngModel)]="searchRestrauntName" (input)="onSearch()" />
+          </div>
+          <div class="col-md-6 text-end">
+            <button class="btn btn-primary" (click)="addEditRestaurant(true,{})">
+                Add Restaurant
+            </button>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th class="table-column-name">Name</th>
+                    <th class="table-column-description">Description</th>
+                    <th class="table-column-location">Location</th>
+                    <th class="table-column-rating">Rating</th>
+
+                    <th class="table-column-actions">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let restaurant of restruantPage;let i = index;">
+                    <td class="table-column-name">{{ restaurant.name }}</td>
+                    <td class="table-column-description">{{ restaurant.description }}</td>
+                    <td class="table-column-loction">{{ restaurant.location }}</td>
+                    <td class="table-column-rating " [ngStyle]="{'color' : restaurant.rating < 3 ? 'red' : 'green'}">{{ restaurant.rating }}</td>
+                    <td class="table-column-actions">
+                        <button class="btn btn-sm btn-primary" (click)="addEditRestaurant(false, restaurant)">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button style="margin:10px" class="btn btn-sm btn-info"
+                            (click)="viewMenu(restaurant)">Menu</button>
+
+                        <button style="margin:10px" class="btn btn-sm btn-secondary" [routerLink]="['/restaurant-details', restaurant.id]"
+                            >View Details</button>
+                        <button class="btn btn-sm btn-danger" (click)="deleteRestaurant(restaurant)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="pagination-block">
+        <div class=" pagination-wrapper ">
+            <ul class="pagination">
+                <li></li>
+            </ul>
+        </div>
+        <div class="modal-footer" aria-label="Page navigation example" style="border:none;">
+            <ul class="pagination" style="margin-top:5px">
+                <li class="page-item" [ngClass]="{disabled:currentPage === 1}">
+                    <a class="page-link" aria-label="Previous" (click)="onPageClick(1)"
+                        [ngClass]="{disabled:currentPage === 1}">
+                        <span aria-hidden="true" style=" font-size: 15px;">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item" [ngClass]="{disabled:currentPage === 1}">
+                    <a class="page-link" aria-label="Previous2" (click)="onPageClick(currentPage - 1)"
+                        [ngClass]="{disabled:currentPage === 1}">
+                        <span aria-hidden="true" style=" font-size: 15px;">&lt;</span>
+                    </a>
+                </li>
+                <li *ngFor="let x of pageList;let i = index;" [ngClass]="{active:currentPage === x}" class="page-item">
+                    <a class="page-link" (click)="onPageClick(x)" style=" font-size: 16px;">{{x}}</a>
+                </li>
+                <li class="page-item" [ngClass]="{disabled:currentPage === pageNo}">
+                    <a class="page-link" (click)="onPageClick(currentPage + 1)"
+                        [ngClass]="{disabled:currentPage === pageNo}" aria-label="Previous2">
+                        <span aria-hidden="true" style="font-size: 15px;">&gt;</span>
+                    </a>
+                </li>
+                <li class="page-item" [ngClass]="{disabled:currentPage === pageNo}">
+                    <a class="page-link" aria-label="Next" [ngClass]="{disabled:currentPage === pageNo}"
+                        (click)="onPageClick(pageNo)">
+                        <span aria-hidden="true" style=" font-size: 15px;">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

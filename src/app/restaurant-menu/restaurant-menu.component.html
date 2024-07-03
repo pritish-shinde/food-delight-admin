@@ -1,0 +1,25 @@
+<div class="container mt-5" style="height: auto; width: 470px; margin-top: 0px;">
+    <div class="row justify-content-center">
+        <div class="col-md-8" class="hotel-menu">
+            <h3> 🥧{{restaurantName}} Menu 🍽</h3>
+            <div *ngFor="let category of menu">
+                <div class="mb-3">
+                  <h6 class="text-primary">{{ category.Veg ? 'Vegetarian' : 'Non-Vegetarian' }}</h6>
+                  <div class="list-group">
+                    <div *ngFor="let item of category.Veg" class="list-group-item d-flex justify-content-between align-items-center" style="color: green; background-color: #e8f5e9;">
+                      <div>{{ item.food }}</div>
+                      <div><strong>{{ item.Price }}</strong></div>
+                    </div>
+                    <div *ngFor="let item of category.NonVeg" class="list-group-item d-flex justify-content-between align-items-center" style="color: red; background-color: #ffebee;">
+                      <div>{{ item.food }}</div>
+                      <div><strong>{{ item.Price }}</strong></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="close-btn">
+                <button class="btn btn-sm btn-primary"  (click)="close()">Close </button>
+            </div>
+        </div>
+    </div>
+</div>

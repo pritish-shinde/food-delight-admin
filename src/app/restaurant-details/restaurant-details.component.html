@@ -1,0 +1,36 @@
+<div class="container" style="max-width: 700px; margin-top: 20px;">
+  
+    <div class="card shadow-lg mb-4" style="border: rgb(193, 192, 192) solid 5px;">
+      <div class="card-body" style="color: black; background-color: #f8f9fa;">
+        <h3 class="card-title">{{ restaurant.name }}</h3>
+        <div>
+          <p class="card-text"><strong>Description:</strong> {{ restaurant.description }}</p>
+          <p class="card-text"><strong>Location:</strong> {{ restaurant.location }}</p>
+          <p class="card-text"><strong>Contact Number:</strong> {{ restaurant.contactNumber }}</p>
+          <p class="card-text"><strong>Email:</strong> {{ restaurant.email }}</p>
+          <p class="card-text"><strong>Opening Hours:</strong> {{ restaurant.openingHours }}</p>
+          <p class="card-text"><strong>Rating:</strong> 
+            <span class="badge bg-success">{{ restaurant.rating }}</span>
+          </p>
+          <h5 class="mt-4">🍽 Menu 🥧</h5>
+          <div *ngFor="let category of restaurant.menu">
+            <div class="mb-3">
+              <h6 class="text-primary">{{ category.Veg ? 'Vegetarian' : 'Non-Vegetarian' }}</h6>
+              <div class="list-group">
+                <div *ngFor="let item of category.Veg" class="list-group-item d-flex justify-content-between align-items-center" style="color: green; background-color: #e8f5e9;">
+                  <div>{{ item.food }}</div>
+                  <div><strong>{{ item.Price }}</strong></div>
+                </div>
+                <div *ngFor="let item of category.NonVeg" class="list-group-item d-flex justify-content-between align-items-center" style="color: red; background-color: #ffebee;">
+                  <div>{{ item.food }}</div>
+                  <div><strong>{{ item.Price }}</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <button class="btn btn-secondary mb-3" (click)="goBack()">Back to Home</button>
+    </div>
+  </div>
+  

@@ -1,0 +1,78 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  th {
+    background-color: rgb(33, 33, 33);
+    color: whitesmoke;
+  }
+  td,tr{
+    border-color: cadetblue;
+    margin: 1px;
+
+  }
+  tr:nth-child(odd) {
+    background-color: rgb(248, 248, 248);
+}
+  th, td {
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .table-column-name {
+    width:15%;  text-align: center
+  }
+
+  .table-column-description {
+    width: 45%;
+  }
+  
+  .table-column-location {
+    width: 12%;
+  }
+  
+  .table-column-actions {
+    width: 23%;
+  }
+  .table-column-rating {
+    width: 5%;
+  }
+
+  
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+
+.patient-block .pagination {
+  color: #00f;
+}
+.active {
+  color: #00f;
+}
+
+.pagination {
+  padding-left: 0;
+  margin: 5px 0;
+}
+.breadcrumb,
+.pagination,
+.progress {
+  border-radius: 4px;
+}
+.pagination > li {
+  display: inline;
+}
+
+.disabled {
+  cursor: not-allowed !important;
+}
+
