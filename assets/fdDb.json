@@ -1,0 +1,366 @@
+{
+    "restrurantList": 
+        [
+            {
+                "id": 12234,
+                "name": "Restaurant Top 1",
+                "description": "This is the top Restaurant. We serve Veg and Non-Veg Foods.",
+                "location": "North Mumbai",
+                "contactNumber": 9402894529,
+                "email": "restaurant@restauranttop1.com",
+                "openingHours": "Mon-Sun: 9AM-10PM",
+                "rating": 4.5,
+                "menu": [
+                    {
+                        "Veg": [
+                            {
+                                "food": "Veg Burger",
+                                "Price": "$3"
+                            },
+                            {
+                                "food": "Pav Bhaji",
+                                "Price": "$2"
+                            }
+                        ]
+                    },
+                    {
+                        "NonVeg": [
+                            {
+                                "food": "Chicken Burger",
+                                "Price": "$4"
+                            },
+                            {
+                                "food": "Chicken Soup",
+                                "Price": "$2"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 12235,
+                "name": "Gourmet Paradise",
+                "description": "Experience gourmet dining with a mix of traditional and contemporary dishes.",
+                "location": "South Mumbai",
+                "contactNumber": 9402894530,
+                "email": "contact@gourmetparadise.com",
+                "openingHours": "Mon-Sun: 8AM-11PM",
+                "rating": 2.7,
+                "menu": [
+                    {
+                        "Veg": [
+                            {
+                                "food": "Paneer Tikka",
+                                "Price": "$5"
+                            },
+                            {
+                                "food": "Veg Biryani",
+                                "Price": "$4"
+                            }
+                        ]
+                    },
+                    {
+                        "NonVeg": [
+                            {
+                                "food": "Mutton Kebab",
+                                "Price": "$6"
+                            },
+                            {
+                                "food": "Fish Curry",
+                                "Price": "$5"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 12236,
+                "name": "The Green House",
+                "description": "A perfect place for healthy and organic food lovers.",
+                "location": "West Mumbai",
+                "contactNumber": 9402894531,
+                "email": "info@thegreenhouse.com",
+                "openingHours": "Mon-Fri: 7AM-9PM, Sat-Sun: 8AM-10PM",
+                "rating": 4.3,
+                "menu": [
+                    {
+                        "Veg": [
+                            {
+                                "food": "Quinoa Salad",
+                                "Price": "$7"
+                            },
+                            {
+                                "food": "Veg Wrap",
+                                "Price": "$5"
+                            }
+                        ]
+                    },
+                    {
+                        "NonVeg": [
+                            {
+                                "food": "Grilled Chicken",
+                                "Price": "$8"
+                            },
+                            {
+                                "food": "Salmon Fillet",
+                                "Price": "$10"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 12237,
+                "name": "Foodie's Heaven",
+                "description": "A heaven for food lovers with a wide variety of cuisines.",
+                "location": "East Mumbai",
+                "contactNumber": 9402894532,
+                "email": "contact@foodiesheaven.com",
+                "openingHours": "Mon-Sun: 10AM-11PM",
+                "rating": 4.6,
+                "menu": [
+                    {
+                        "Veg": [
+                            {
+                                "food": "Veg Pizza",
+                                "Price": "$6"
+                            },
+                            {
+                                "food": "Aloo Paratha",
+                                "Price": "$3"
+                            }
+                        ]
+                    },
+                    {
+                        "NonVeg": [
+                            {
+                                "food": "Pepperoni Pizza",
+                                "Price": "$7"
+                            },
+                            {
+                                "food": "Butter Chicken",
+                                "Price": "$9"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 12238,
+                "name": "Spice Route",
+                "description": "A journey through the world of spices and flavors.",
+                "location": "Central Mumbai",
+                "contactNumber": 9402894533,
+                "email": "info@spiceroute.com",
+                "openingHours": "Mon-Sun: 11AM-10PM",
+                "rating": 2.4,
+                "menu": [
+                    {
+                        "Veg": [
+                            {
+                                "food": "Paneer Butter Masala",
+                                "Price": "$6"
+                            },
+                            {
+                                "food": "Chole Bhature",
+                                "Price": "$4"
+                            }
+                        ]
+                    },
+                    {
+                        "NonVeg": [
+                            {
+                                "food": "Lamb Rogan Josh",
+                                "Price": "$8"
+                            },
+                            {
+                                "food": "Prawn Curry",
+                                "Price": "$7"
+                            }
+                        ]
+                    }
+                ]
+            }, {
+                "id": 12234,
+                "name": "Restaurant Top 2",
+                "description": "This is the top Restaurant. We serve Veg and Non-Veg Foods.2",
+                "location": "North Mumbai2",
+                "contactNumber": 94028945292,
+                "email": "restaurant@restauranttop21.com",
+                "openingHours": "Mon-Sun: 9AM-10PM",
+                "rating": 4.5,
+                "menu": [
+                    {
+                        "Veg": [
+                            {
+                                "food": "Veg Burger",
+                                "Price": "$3"
+                            },
+                            {
+                                "food": "Pav Bhaji",
+                                "Price": "$2"
+                            }
+                        ]
+                    },
+                    {
+                        "NonVeg": [
+                            {
+                                "food": "Chicken Burger",
+                                "Price": "$4"
+                            },
+                            {
+                                "food": "Chicken Soup",
+                                "Price": "$2"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 12235,
+                "name": "Gourmet Paradise 2",
+                "description": "Experience gourmet dining with a mix of traditional and contemporary dishes 2.",
+                "location": "South Mumbai 2",
+                "contactNumber": 9402894532,
+                "email": "contact@gourmetparadise.com",
+                "openingHours": "Mon-Sun: 8AM-11PM",
+                "rating": 4.7,
+                "menu": [
+                    {
+                        "Veg": [
+                            {
+                                "food": "Paneer Tikka",
+                                "Price": "$5"
+                            },
+                            {
+                                "food": "Veg Biryani",
+                                "Price": "$4"
+                            }
+                        ]
+                    },
+                    {
+                        "NonVeg": [
+                            {
+                                "food": "Mutton Kebab",
+                                "Price": "$6"
+                            },
+                            {
+                                "food": "Fish Curry",
+                                "Price": "$5"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 12236,
+                "name": "The Green House 2",
+                "description": "A perfect place for healthy and organic food lovers 2.",
+                "location": "West Mumbai 2",
+                "contactNumber": 9402894532,
+                "email": "info@thegreenhouse2.com",
+                "openingHours": "Mon-Fri: 7AM-9PM, Sat-Sun: 8AM-10PM",
+                "rating": 4.3,
+                "menu": [
+                    {
+                        "Veg": [
+                            {
+                                "food": "Quinoa Salad",
+                                "Price": "$7"
+                            },
+                            {
+                                "food": "Veg Wrap",
+                                "Price": "$5"
+                            }
+                        ]
+                    },
+                    {
+                        "NonVeg": [
+                            {
+                                "food": "Grilled Chicken",
+                                "Price": "$8"
+                            },
+                            {
+                                "food": "Salmon Fillet",
+                                "Price": "$10"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 12237,
+                "name": "Foodie's Heaven 2",
+                "description": "A heaven for food lovers with a wide variety of cuisines 2.",
+                "location": "East Mumbai 2",
+                "contactNumber": 9402894522,
+                "email": "contact@foodiesheaven2.com",
+                "openingHours": "Mon-Sun: 10AM-11PM",
+                "rating": 4.6,
+                "menu": [
+                    {
+                        "Veg": [
+                            {
+                                "food": "Veg Pizza",
+                                "Price": "$6"
+                            },
+                            {
+                                "food": "Aloo Paratha",
+                                "Price": "$3"
+                            }
+                        ]
+                    },
+                    {
+                        "NonVeg": [
+                            {
+                                "food": "Pepperoni Pizza",
+                                "Price": "$7"
+                            },
+                            {
+                                "food": "Butter Chicken",
+                                "Price": "$9"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 12238,
+                "name": "Spice Route 2",
+                "description": "A journey through the world of spices and flavors 2.",
+                "location": "Central Mumbai 2",
+                "contactNumber": 9402894532,
+                "email": "info@spiceroute2.com",
+                "openingHours": "Mon-Sun: 11AM-10PM",
+                "rating": 4.4,
+                "menu": [
+                    {
+                        "Veg": [
+                            {
+                                "food": "Paneer Butter Masala",
+                                "Price": "$6"
+                            },
+                            {
+                                "food": "Chole Bhature",
+                                "Price": "$4"
+                            }
+                        ]
+                    },
+                    {
+                        "NonVeg": [
+                            {
+                                "food": "Lamb Rogan Josh",
+                                "Price": "$8"
+                            },
+                            {
+                                "food": "Prawn Curry",
+                                "Price": "$7"
+                            }
+                        ]
+                    }
+                ]
+            }
+       
+        ]
+}
+
