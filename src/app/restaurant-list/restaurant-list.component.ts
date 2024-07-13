@@ -16,16 +16,16 @@ export class RestaurantListComponent implements OnInit {
   allRestaurants: any;
   constructor(private restaurantService: RestaurantService,
     public dialog: MatDialog,
-    private router : Router
+    private router: Router
   ) { }
   restruantList: any = [];
   errorMessage: string = '';
   searchRestrauntName: string = '';
   pageSlice: any;
-  pageNo: any=1;
-  pageList: any[]=[1];
-  currentPage: any=1;
-  restruantPage: any=[];
+  pageNo: any = 1;
+  pageList: any[] = [1];
+  currentPage: any = 1;
+  restruantPage: any = [];
 
   ngOnInit() {
     this.getRestaurants();
@@ -57,31 +57,31 @@ export class RestaurantListComponent implements OnInit {
   viewMenu(restaurant: any) {
     const dialogRef = this.dialog.open(RestaurantMenuComponent, {
       width: '470px',
-      data: {menu :restaurant.menu, name : restaurant.name}
+      data: { menu: restaurant.menu, name: restaurant.name }
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      
+
     });
   }
 
-  addEditRestaurant(isNew:Boolean = true, details:any){
+  addEditRestaurant(isNew: Boolean = true, details: any) {
     const dialogRef = this.dialog.open(AddRestaurantComponent, {
       width: '500px',
       data: {
-        isNew : isNew,
-        restaurantDetails : details
+        isNew: isNew,
+        restaurantDetails: details
       }
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if(result){
+      if (result) {
         this.getRestaurants();
       }
     });
   }
 
-  getRestaurants(){
+  getRestaurants() {
     this.restaurantService.getRestaurants().subscribe(
       (data) => {
         this.restruantList = data;
@@ -94,56 +94,44 @@ export class RestaurantListComponent implements OnInit {
     );
   }
 
-  pagination(){
-    if (this.restruantList.restrurantList.length % 5 === 0) {
-      this.pageNo = Math.floor(this.restruantList.restrurantList.length / 5);
+
+  onSearch(): void {
+    if (this.searchRestrauntName.trim().length > 0) {
+      this.restruantList.restrurantList = [...this.restruantList.restrurantList];
+      this.restruantList.restrurantList = this.allRestaurants.filter((restaurant: any) =>
+        restaurant.name.toLowerCase().includes(this.searchRestrauntName.toLowerCase())
+      );
     } else {
-      this.pageNo = Math.floor(this.restruantList.restrurantList.length / 5) + 1;
+      this.restruantList.restrurantList = [...this.allRestaurants];
     }
+    this.pagination();
+  }
+
+
+  pagination() {
+    const totalItems = this.restruantList.restrurantList.length;
+    this.pageNo = Math.ceil(totalItems / 5);
     this.onPageClick(1);
   }
-
-    onSearch(): void {
-      if (this.searchRestrauntName.trim().length > 0) {
-        this.restruantList.restrurantList = [...this.restruantList.restrurantList];
-        this.restruantList.restrurantList = this.allRestaurants.filter((restaurant:any) =>
-          restaurant.name.toLowerCase().includes(this.searchRestrauntName.toLowerCase())
-        );
-      } else {
-        this.restruantList.restrurantList = [...this.allRestaurants];
-      }
-      this.pagination();
-  }
-  viewDetails(restaurant: any){
-
-  }
-
   
-  pager(page: number) {
-		let i = page + 5;
-		if (i > this.pageNo) {
-			this.pageList = [];
-			for (let j = this.pageNo-5; j <= this.pageNo; j++) {
-				if (j > 0) { this.pageList.push(j); }
-			}
-    console.log(this.pageList);
-
-			return;
-		}
-		else {
-			this.pageList = [];
-		}
-		for (let j = page; j <= i; j++) {
-			this.pageList.push(j);
-		}
-	}
-
-	onPageClick(page: number) {
-		if (page > 0 && page <= this.pageNo) {
-			this.currentPage = page;
-			this.restruantPage = this.restruantList.restrurantList.slice(5 * (page - 1), 5 * page)
-			this.pager(page)
-		}
-	}
+  onPageClick(page: number) {
+    if (page > 0 && page <= this.pageNo) {
+      this.currentPage = page;
+      const startIndex = (page - 1) * 5;
+      const endIndex = page * 5;
+      this.restruantPage = this.restruantList.restrurantList.slice(startIndex, endIndex);
+      this.updatePageList(page);
+    }
+  }
+  
+  updatePageList(currentPage: number) {
+    this.pageList = [];
+    const startPage = Math.max(1, currentPage - 2);
+    const endPage = Math.min(this.pageNo, currentPage + 2);
+    for (let i = startPage; i <= endPage; i++) {
+      this.pageList.push(i);
+    }
+  }
+  
 
 }
